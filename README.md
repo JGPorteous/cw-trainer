@@ -2,7 +2,7 @@
 Modifications by ZS6JGP
  - Implemented 0.91" LCD
  - Serial Key Input for Debugging
- - Using PlatforIO EDI
+ - Using PlatformIO IDE
 
 
 # README from FORK
