@@ -1,4 +1,11 @@
 # cw-trainer
+Modifications by ZS6JGP
+ - Implemented 0.91" LCD
+ - Serial Key Input for Debugging
+ - Using PlatforIO EDI
+
+
+# README from FORK
 Morse code trainer Arduino project
 
 From: The article "Arduino CW Trainer" by Tom Lewis, N4TL in the September 2016 QST magazine.
