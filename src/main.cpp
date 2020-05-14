@@ -102,8 +102,8 @@ int Key_speed_adj = -2; // correction for keying speed
 
 // IO definitions
 const byte morseInPin = 4; // Pin for input
-const byte beep_pin = 5;  // Pin for CW tone
-const byte key_pin = 6;   // Pin for CW Key
+const byte beep_pin = 6;  // Pin for CW tone
+const byte key_pin = 5;   // Pin for CW Key
 
 // Forward Declared Functions
 byte prefs_set(byte pref, int val);
@@ -118,6 +118,7 @@ void lcdWrite(const char *s);
 void lcdWrite(const char *s, uint32_t delay);
 void lcdWrite(char *s);
 void lcdWriteHeader(const char *s);
+ 
 
 //Button Definitions (Required as this was in the Adafruit_RGBLCDShield class
 #define BUTTON_UP 0x08
@@ -130,7 +131,7 @@ void lcdWriteHeader(const char *s);
 #define decoderHeader "Decoder"
 #define parisTestHeader "PARIS Test"
 #define settingsHeader "Settings"
-
+ 
 //====================
 // Setup Function
 //====================
@@ -152,8 +153,10 @@ void setup()
   // Initialize application preferences
   prefs_init();
 
+  
 }  // end setup()
-
+ 
+ 
 
 //====================
 // Main Loop Function
@@ -528,7 +531,7 @@ void morse_trainer()
     error = false;
     rx_cnt = 0;
     //lcd.setCursor(0, 1); // Set the cursor to bottom line, left
-    morseInput.setspeed(prefs[KEY_SPEED]);
+    //morseInput.setspeed(prefs[KEY_SPEED]);
     // Serial.print("Key speed for decoding set to: "); Serial.println(prefs[KEY_SPEED]);
     do {  
       morseInput.decode();  // Start decoder and check char when it comes in
